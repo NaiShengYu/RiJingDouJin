@@ -32,10 +32,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    NSString *qqNumber = @"2158015525";
-//    NSString *openQQUrl = [NSString stringWithFormat:@"mqq://im/chat?chat_type=wpa&uin=%@&version=1&src_type=web",qqNumber];
-//    NSURL *url = [NSURL URLWithString:openQQUrl];
-//    [[UIApplication sharedApplication] openURL:url];
+
     
     self.oid = @"";
     [[NSURLCache sharedURLCache]removeAllCachedResponses];
@@ -97,9 +94,9 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
     
     NSLog(@"结束调用了");
-//    JSContext *context =[webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
-//    JSAndOCTask *testJO=[JSAndOCTask new];
-//    __weak __typeof(&*self)blockSelf = self;
+    JSContext *context =[webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
+    JSAndOCTask *testJO=[JSAndOCTask new];
+    __weak __typeof(&*self)blockSelf = self;
 //    testJO.wxshare = ^(NSString *link, NSString *img, NSString *desc, NSString *title) {
 //        NSArray* imageArray = @[img];
 //        NSMutableDictionary *param =[[NSMutableDictionary alloc]init];
@@ -152,11 +149,11 @@
 //            [blockSelf navLocation:location];
 //        });
 //    };
-////    testJO.startLocationBlok = ^{
-////        //
-////    };
+//    testJO.startLocationBlok = ^{
+//        //
+//    };
 //     [blockSelf getLocation];
-//    context[@"webapp"] =testJO;
+    context[@"webapp"] =testJO;
     
 }
 

@@ -108,4 +108,12 @@
     
 }
 
+
+- (void)qqkf:(NSString *)QQ{
+    
+    NSString *openQQUrl = [NSString stringWithFormat:@"mqq://im/chat?chat_type=wpa&uin=%@&version=1&src_type=web",QQ];
+        NSURL *url = [NSURL URLWithString:openQQUrl];
+        [[UIApplication sharedApplication] openURL:url];
+}
+
 @end

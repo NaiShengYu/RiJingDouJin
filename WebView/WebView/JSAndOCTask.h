@@ -11,23 +11,25 @@
 #import <MapKit/MapKit.h>
 @protocol TestJSObjectProtocol <JSExport>
 
-//微信分享
-- (void)share:(NSString *)link AndImg:(NSString *)img AndDesc:(NSString *)desc AndTitle:(NSString *)title;
+////微信分享
+//- (void)share:(NSString *)link AndImg:(NSString *)img AndDesc:(NSString *)desc AndTitle:(NSString *)title;
+//
+////支付宝支付
+//- (void)alipay:(NSString *)url;
+//
+////微信支付
+//- (void)wxpay:(NSString *)ID;
+//
+////微信分享
+//- (void)share:(NSString *)ID;
+//
+//- (void)scan;
+//
+//- (void)startLocation;
+//
+//- (void)dhmap:(NSString *)lacation;
 
-//支付宝支付
-- (void)alipay:(NSString *)url;
-
-//微信支付
-- (void)wxpay:(NSString *)ID;
-
-//微信分享
-- (void)share:(NSString *)ID;
-
-- (void)scan;
-
-- (void)startLocation;
-
-- (void)dhmap:(NSString *)lacation;
+- (void)qqkf:(NSString *)QQ;
 
 @end
 @interface JSAndOCTask : NSObject <TestJSObjectProtocol>
